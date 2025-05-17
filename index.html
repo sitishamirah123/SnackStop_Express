@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnackStop Express - Order Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+        <img src="logo2.jpeg">
+        </div>
+        <h1>SnackStop Express</h1>
+        <p>Quick, Affordable, and Right Next Door</p>
+    </header>
+
+    <main>
+        <section class="menu">
+            <h2>Our Menu</h2>
+            
+            <div class="menu-category">
+                <h3>Savory Bites (RM1–RM3)</h3>
+                <ul>
+                    <li>Mini Sandwiches (Egg/Tuna/Chicken) – RM2</li>
+                    <li>Chicken Nuggets (5 pcs) – RM2.50</li>
+                </ul>
+            </div>
+            
+            <div class="menu-category">
+                <h3>Sweet Treats (RM1–RM3)</h3>
+                <ul>
+                    <li>Chocolate Chip Cookies (2 pcs) – RM1</li>
+                    <li>Pudding / Jelly Cup – RM1.50</li>
+                </ul>
+            </div>
+            
+            <div class="menu-category">
+                <h3>Healthy Picks (RM1–RM3)</h3>
+                <ul>
+                    <li>Fruit Cups / Fruit Skewers – RM2.50</li>
+                </ul>
+            </div>
+            
+            <div class="menu-category">
+                <h3>Drinks (RM1–RM3)</h3>
+                <ul>
+                    <li>Juice Box – RM1.50</li>
+                    <li>Milo / Cereal Drink (Chilled) – RM2.50</li>
+                    <li>Mineral Water – RM1</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="order-form">
+            <h2>Place Your Order</h2>
+            <form id="orderForm" action="https://formsubmit.co/snackstop.express9@gmail.com" method="POST">
+                <!-- FormSubmit Settings -->
+                <input type="hidden" name="_subject" value="New Order from SnackStop Express">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html" > <!-- (Optional) Redirect after submission -->
+                <input type="hidden" name="_captcha" value="false"> <!-- Disable captcha -->
+                
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Delivery Option:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="deliveryOption" value="Pickup" checked>
+                            Pickup (UniMAP)
+                        </label>
+                        <label>
+                            <input type="radio" name="deliveryOption" value="Delivery">
+                            Delivery (UniMAP area only)
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group" id="addressGroup" style="display: none;">
+                    <label for="address">Delivery Address (Building/Room):</label>
+                    <input type="text" id="address" name="address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="orderItems">Your Order:</label>
+                    <textarea id="orderItems" name="orderItems" rows="5" required 
+                        placeholder="Example: 
+2x Mini Chicken Sandwich - RM4
+1x Chocolate Chip Cookies - RM1
+1x Milo - RM2.50
+Total: RM7.50"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Special Instructions:</label>
+                    <textarea id="notes" name="notes" rows="2" placeholder="Any special requests or dietary restrictions"></textarea>
+                </div>
+                
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us: +60 16-807 5557 | snackstop.express9@gmail.com</p>
+        <p>Universiti Malaysia Perlis (UniMAP)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
